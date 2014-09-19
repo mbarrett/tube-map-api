@@ -1,6 +1,6 @@
-ot-tube-map
+tube-map-api
 ===========
 
-Restaurant bookings via the London tube map
+Restaurant bookings API via London tube map locations.
 
-<img src="https://www.codeship.io/projects/e7b04960-38c8-0131-9034-3611df6ecce9/status" />
+[ ![Codeship Status for mbarrett/tube-map-api](https://www.codeship.io/projects/7aaef840-2212-0132-f91c-1607115c7bcb/status)](https://www.codeship.io/projects/36416)
