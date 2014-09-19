@@ -1,0 +1,13 @@
+<form action="reservation/make" method="post" >
+	Firstname: <input type="text" name="firstname" value="John" /><br />
+	Lastname: <input type="text" name="lastname" value="Smith" /><br />
+	Email: <input type="text" name="email" value="test_<%= SecureRandom.hex(5) %>@test-ot.com" /><br />
+	Party size: <input type="text" name="partysize" value="<%= @partysize %>" /><br />
+	RID: <input type="text" name="rid" value="<%= @rid %>" /><br />
+	DateTime: <input type="text" name="datetime" value="<%= @datetime %>" /><br />
+	Results key: <input type="text" name="resultskey" value="<%= @resultskey %>" /><br />
+	Security ID: <input type="text" name="securityid" value="<%= @securityid %>" /><br />
+	Slotlock ID: <input type="text" name="slotlockid" value="<%= @slotlockid %>" /><br />
+	<br />
+	<input type="submit" value="Submit">
+</form>

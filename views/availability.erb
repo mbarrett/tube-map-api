@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="javascript/Availability.js"></script>
+
+<form action="slotlock" method="post" id="js-form">
+	<% @timeslots.each_with_index { |val, index| %>
+		<div class="js-timeslot" data-securityid="<%= val.securityid %>" data-datetime="<%= val.time %>">
+			<p>Timeslot <%= index + 1 %></p>
+				<p>Datetime => <%= val.time %></p>
+				<p>Points => <%= val.points %></p>
+				<p>Offers => <%= val.offerids %></p>
+				<p>Security ID => <%= val.securityid %></p>
+			</p>
+		</div>
+	<% } %>
+	<input type="hidden" id="rid" name="rid" value="<%= @rid %>" />
+	<input type="hidden" id="partysize" name="partysize" value="<%= @partysize %>" />
+	<input type="hidden" id="resultskey" name="resultskey" value="<%= @resultskey %>" />
+
+	<input type="hidden" id="securityid" name="securityid" />
+	<input type="hidden" id="datetime" name="datetime" />
+</form>
+
+<script type="text/javascript">
+	OTTUBEMAP.Availability.init({
+		HiddenDateTimeField: 'datetime',
+		HiddenSecurityIdField: 'securityid',
+		TimeSlotClass: 'js-timeslot',
+		FormId: 'js-form'
+	});
+</script>
+
+<style>
+	div { border:1px dotted black; margin-bottom: 10px; padding:5px; width:350px; }
+	div:hover { cursor: pointer; }
+</style>

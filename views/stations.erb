@@ -1,0 +1,11 @@
+<h1>Tube stations</h1>
+
+<p>[Name, Lat, Long, Zone]</p>
+
+<ul>
+	<% @stations.each do |station| %>
+	<li>
+		<a href="/station/<%= station.name %>"><%= station.name %></a>, <%= station.lat %>, <%= station.long %>, <%= station.zone %>
+	</li>
+	<% end %>
+<ul>
